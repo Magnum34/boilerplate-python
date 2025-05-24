@@ -1,0 +1,13 @@
+services:
+  python3:
+    build:
+      dockerfile: ./docker/python3/Dockerfile
+      context: ./
+    volumes:
+      - ./app:/app
+  anacoda:
+    build:
+      dockerfile: ./docker/math/Dockerfile
+      context: ./
+    ports:
+      - 8000:8000
